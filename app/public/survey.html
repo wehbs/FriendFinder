@@ -213,6 +213,8 @@
         </div>
     </div>
     <script>
+
+
         $("#submit").on("click", function (event) {
             event.preventDefault();
             var newUser = {
@@ -222,14 +224,20 @@
             };
 
             $.post("/api/friends", newUser)
-                .done(function (data) {
-                    // console.log(data);
+                .done(function () {
+
                     $.get("/api/friends", function (data) {
-                        console.log(data);
+                        console.log(newUser);
 
                         for (var i = 0; i < data.length; i++) {
 
-                            console.log(data[i].name + " " + data[i].scores);
+                            var potentialFriends = data[i];
+
+                            if (newUser === potentialFriends) continue;
+
+
+
+                            console.log(potentialFriends.name + " " + potentialFriends.scores);
 
                         }
 
@@ -243,6 +251,8 @@
 
 
         });
+
+
     </script>
 </body>
 
