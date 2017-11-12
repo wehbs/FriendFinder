@@ -223,7 +223,7 @@
 
             $.post("/api/friends", newUser)
                 .done(function (data) {
-                    console.log(data);
+                    // console.log(data);
                     $.get("/api/friends", function (data) {
                         console.log(data);
 
