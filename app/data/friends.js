@@ -3,14 +3,14 @@
 
 var users = [
     {
-        name: "Test1",
-        photo: "https://avatars3.githubusercontent.com/u/16469815?s=400&u=ff408fe818a1c535ec02f13ddc4da9895e490e98&v=4",
-        scores: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        name: "Steve",
+        photo: "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/0ef62e4df27b4ba7294de889fdbc33e476a08ec9_254x191.jpg?",
+        scores: [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
     },
     {
-        name: "Test2",
-        photo: "https://avatars3.githubusercontent.com/u/16469815?s=400&u=ff408fe818a1c535ec02f13ddc4da9895e490e98&v=4",
-        scores: [1, 5, 2, 8, 5, 6, 9, 4, 2, 1]
+        name: "Bill",
+        photo: "https://specials-images.forbesimg.com/imageserve/59d502f931358e542c034e76/416x416.jpg?background=000000&cropX1=245&cropX2=2420&cropY1=636&cropY2=2813",
+        scores: [1, 5, 2, 3, 5, 4, 5, 4, 2, 1]
     }
 ];
 

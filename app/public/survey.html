@@ -262,6 +262,13 @@
                         console.log(data);
                         console.log(bestFriendDifference);                        
                         console.log(bestFriend.name);
+
+                        $("#matchName").text(bestFriend.name);
+	    		        $('#matchImg').attr("src", bestFriend.photo);
+
+                        // Show the modal with the best match 
+                        $("#resultsModal").modal('toggle');
+
                     });
                     
                 });
