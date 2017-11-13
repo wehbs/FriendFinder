@@ -229,25 +229,42 @@
                     $.get("/api/friends", function (data) {
                         console.log(newUser);
 
+
+                        var bestFriend;
+                        var bestFriendDifference = 1000;
+
+
                         for (var i = 0; i < data.length; i++) {
 
-                            var potentialFriends = data[i];
+                            var potentialFriend = data[i];
+                            console.log(potentialFriend.name);
+                            var totalDifference = 0;                            
+                            if (newUser.name === potentialFriend.name) continue;
 
-                            if (newUser === potentialFriends) continue;
+
+                            for (var f = 0; f < potentialFriend.scores[f]; f++) {
+
+                                totalDifference += Math.abs(parseInt(newUser.scores[f]) - parseInt(potentialFriend.scores[f]));
+
+                            }
 
 
+                            if (totalDifference < bestFriendDifference) {
 
-                            console.log(potentialFriends.name + " " + potentialFriends.scores);
+                                bestFriend = potentialFriend;
+                                bestFriendDifference = totalDifference;
+                                
+                                
+                            }
 
                         }
 
-
+                        console.log(data);
+                        console.log(bestFriendDifference);                        
+                        console.log(bestFriend.name);
                     });
+                    
                 });
-
-
-
-
 
 
         });
